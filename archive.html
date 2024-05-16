@@ -8,6 +8,7 @@
     <meta name="keywords" content="Oxford, Encampment, Palestine, activism, solidarity, social media, Gaza.">
     <meta name="author" content="Oxford Action For Palestine">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/logo.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
@@ -96,37 +97,26 @@
         </footer>
     </div>
 
-     <script>
+    <script>
         // JavaScript to toggle the dropdown menu
-        // JavaScript to toggle the dropdown menu
-        document.querySelector('.dropbtn').addEventListener('click', function() {
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            event.stopPropagation();  // Prevent event from bubbling up to window
             var dropdown = document.querySelector('.dropdown-content');
-            if (dropdown.style.display === 'block') {
-                dropdown.style.display = 'none';
-            } else {
-                dropdown.style.display = 'block';
-            }
+            dropdown.classList.toggle('show');
             // Change the title when the button is clicked
             if (window.innerWidth > 768) {
                 document.querySelector('.title em').textContent = "OXFORD IS ON THE WRONG SIDE OF HISTORY.";
             }
         });
 
-
         // Close the dropdown menu if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
+        window.addEventListener('click', function(event) {
+            var dropdown = document.querySelector('.dropdown-content');
+            if (!event.target.closest('.dropbtn') && dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
             }
-        }
+        });
 
-        // Function to calculate the number of days between two dates
         // Function to calculate the number of days between two dates
         function calculateDaysSince(startDate) {
             const today = new Date();
@@ -146,12 +136,12 @@
         document.getElementById('encampment-counter').textContent = calculateDaysSince(encampmentStartDate);
 
         window.addEventListener('DOMContentLoaded', function() {
-                    fetch('header.html')
-                        .then(response => response.text())
-                        .then(html => {
-                            document.getElementById('header-placeholder').innerHTML = html;
-                        });
+            fetch('header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('header-placeholder').innerHTML = html;
                 });
+        });
     </script>
 </body>
 </html>

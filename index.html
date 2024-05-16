@@ -8,6 +8,7 @@
     <meta name="keywords" content="Oxford, Encampment, Palestine, activism, solidarity, social media, Gaza.">
     <meta name="author" content="Oxford Action For Palestine">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/logo.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
@@ -57,9 +58,11 @@
             </div>            
             <div class="main-content">
                 <div class="main-why">
-                    We call on the <strong>University of Oxford</strong> to divest from and boycott <strong>israel's criminal regime</strong>, end its <strong>complicity in scholasticide</strong>, and <strong>repair the injustices</strong> it perpetuates through commitment to help rebuild Gaza's educational system.
+                    We call on the <strong>University of Oxford</strong> to divest from and boycott <strong>israel's criminal regime</strong>, end its <strong>complicity in scholasticide</strong>, and <strong>repair the injustices it perpetuates</strong> through a commitment to help rebuild Gaza's educational system.
                 </div>
                 <div class="counters">
+                    <h1 style= "margin-top: 40px;">Time Is of the Essence.</h1>
+
                     <p>Days since encampment began: <span id="encampment-counter">0</span></p>
                     <p>Days since genocide began: <span id="genocide-counter">0</span></p>
                     <p>Days since occupation began: <span id="occupation-counter">0</span></p>
@@ -75,7 +78,7 @@
                     <li><a href="assets/05 15 RALLY ADVISORY.pdf" target="_blank">May 15. Rally Advisory.</a></li>
 
                 </ul>
-                <h1 style="margin-top: 40px;">Oxford is Implicated.</h1>
+                <h1 style="margin-top: 40px;">Oxford Is Implicated.</h1>
                 <blockquote>
                     <p>"You are being invited to help make history. That cannot frighten you, nor will you laugh at it. It is not in your accustomed line; it doesn't involve Africa, but a piece of Asia Minor, not Englishmen but Jews. But had this been on your path, you would have done it by now. How, then, do I happen to turn to you, since this is an out-of-the-way matter for you? How indeed? Because it is something colonial."</p>
                     <footer><em> &mdash;Theodor Herzl, the father of modern Zionism, requesting the aid of Oxford’s Cecil Rhodes</em></footer>
@@ -88,37 +91,26 @@
         </footer>
     </div>
 
-     <script>
+    <script>
         // JavaScript to toggle the dropdown menu
-        // JavaScript to toggle the dropdown menu
-        document.querySelector('.dropbtn').addEventListener('click', function() {
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            event.stopPropagation();  // Prevent event from bubbling up to window
             var dropdown = document.querySelector('.dropdown-content');
-            if (dropdown.style.display === 'block') {
-                dropdown.style.display = 'none';
-            } else {
-                dropdown.style.display = 'block';
-            }
+            dropdown.classList.toggle('show');
             // Change the title when the button is clicked
             if (window.innerWidth > 768) {
                 document.querySelector('.title em').textContent = "OXFORD IS ON THE WRONG SIDE OF HISTORY.";
             }
         });
 
-
         // Close the dropdown menu if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
+        window.addEventListener('click', function(event) {
+            var dropdown = document.querySelector('.dropdown-content');
+            if (!event.target.closest('.dropbtn') && dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
             }
-        }
+        });
 
-        // Function to calculate the number of days between two dates
         // Function to calculate the number of days between two dates
         function calculateDaysSince(startDate) {
             const today = new Date();
@@ -138,12 +130,12 @@
         document.getElementById('encampment-counter').textContent = calculateDaysSince(encampmentStartDate);
 
         window.addEventListener('DOMContentLoaded', function() {
-                    fetch('header.html')
-                        .then(response => response.text())
-                        .then(html => {
-                            document.getElementById('header-placeholder').innerHTML = html;
-                        });
+            fetch('header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('header-placeholder').innerHTML = html;
                 });
+        });
     </script>
 </body>
 </html>
