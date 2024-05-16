@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford Encampment</title>
+    <meta name="description" content="OXFORD ACTION FOR PALESTINE. For Palestinian liberation. Against Israeli genocide. All eyes on Gaza.">
+    <meta name="keywords" content="Oxford, Encampment, Palestine, activism, solidarity, social media, Gaza.">
+    <meta name="author" content="Oxford Action For Palestine">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href = index.html>
+                <img src="assets/logo.png" alt="Oxford Encampment Icon"></a>
+            </div>
+            <div class="title">
+                <em>OXFORD ACTION FOR PALESTINE.</em>
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home.</a>
+                        <a href="manifesto.html">Manifesto.</a>
+                        <a href="demands.html">Demands.</a>
+                        <a href="press.html">Press.</a>
+                        <a href="archive.html">Archive.</a>
+
+                        <!-- <a href="solidarity.html">In Solidarity.</a> -->
+
+                        <!-- <a href="oxford.html">Oxford, the Brain of Genocide.</a> -->
+    
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="side-panel">
+                <p class="how-to-get-involved"><em><strong>GET INVOLVED.</strong></em></p>
+                <button onclick="window.location.href='https://oxfordgazastudentsolidarity.wordpress.com/'">Sign the Student Letter</button>
+                <button onclick="window.location.href='https://oxfordgazastaffsolidarity.wordpress.com/'">Sign the Staff Letter</button>
+                <button onclick="window.location.href='https://oxfordgazanhssolidarity9.wordpress.com/'">Sign the Healthcare Solidarity Letter</button>
+                <button onclick="window.location.href='https://chuffed.org/project/109359-palestine-direct-action-fund'">Donate</button>
+                <p style="margin-top: 40px"><em><strong>SOCIAL MEDIA.</strong></em></p>
+            <button onclick="window.location.href='https://www.instagram.com/oxact4pal/'">Instagram</button>
+            <button onclick="window.location.href='https://twitter.com/OxAct4Pal'">Twitter</button>
+
+
+
+                <p style="margin-top: 40px"><em><strong>ALL EYES ON GAZA.</strong></em></p>
+            </div>            
+            <div class="archive">
+                <img src="assets/gallery/DSCF5413.jpg" alt="">
+                <img src="assets/gallery/DSCF2920_scrubbed.png" alt="">
+                <img src="assets/gallery/IMG_6309_scrubbed.png" alt="">
+                <img src="assets/gallery/DSCF3180_scrubbed.png" alt="">
+                <img src="assets/gallery/IMG_6578_scrubbed.png" alt="">
+                <img src="assets/gallery/IMG_6379_scrubbed.png" alt="">
+                <img src="assets/gallery/DSCF5430_anonymized.jpg" alt="">
+                <img src="assets/gallery/IMG_9133_scrubbed.png" alt="">
+                <img src="assets/gallery/IMG_6317_scrubbed.png" alt="">
+                <img src="assets/gallery/P5088779.jpg" alt="">
+                <img src="assets/gallery/DSCF2421_scrubbed.png" alt="">
+                <img src="assets/gallery/IMG_9092_scrubbed.png" alt="">
+                <img src="assets/gallery/DSCF2442_scrubbed.png" alt="">
+                <img src="assets/gallery/IMG_6520_scrubbed.png" alt="">
+                <img src="assets/gallery/DSC08506.jpg" alt="">
+                <img src="assets/gallery/DSCF4595.jpg" alt="">
+                <img src="assets/gallery/P5068517.jpg" alt="">
+                <img src="assets/gallery/IMG_6574_scrubbed.png" alt="">
+                <img src="assets/gallery/P5068461.jpg" alt="">
+                <img src="assets/gallery/DSCF2609_scrubbed.png" alt="">
+                <img src="assets/gallery/DSCF2555_scrubbed.png" alt="">
+                <img src="assets/gallery/P5088779 (1).jpg" alt="">
+                <img src="assets/gallery/IMG_6470_scrubbed.png" alt="">
+                <img src="assets/gallery/DSCF5443.jpg" alt="">
+                <img src="assets/gallery/IMG_6323_scrubbed.png" alt="">
+                <img src="assets/gallery/DSCF5424.jpg" alt="">
+                <img src="assets/gallery/P5068424.jpg" alt="">
+                <img src="assets/gallery/P5068381.jpg" alt="">
+                <img src="assets/gallery/DSCF3223_scrubbed.png" alt="">
+                <img src="assets/gallery/DSCF3276_scrubbed.png" alt="">
+                <img src="assets/gallery/DSCF5421.jpg" alt="">
+                <img src="assets/gallery/DSCF5409.jpg" alt="">
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024, all rights reserved. For media requests, contact <a href="mailto:press@oxact4pal.com">oxpalpress@proton.me</a>.</p>
+        </footer>
+    </div>
+
+     <script>
+        // JavaScript to toggle the dropdown menu
+        // JavaScript to toggle the dropdown menu
+        document.querySelector('.dropbtn').addEventListener('click', function() {
+            var dropdown = document.querySelector('.dropdown-content');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+            // Change the title when the button is clicked
+            if (window.innerWidth > 768) {
+                document.querySelector('.title em').textContent = "OXFORD IS ON THE WRONG SIDE OF HISTORY.";
+            }
+        });
+
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        // Function to calculate the number of days between two dates
+        // Function to calculate the number of days between two dates
+        function calculateDaysSince(startDate) {
+            const today = new Date();
+            const oneDay = 1000 * 60 * 60 * 24;
+            const diffInMs = today - startDate;
+            return Math.floor(diffInMs / oneDay);
+        }
+
+        // Define the start dates for each event
+        const genocideStartDate = new Date('2023-10-10');
+        const occupationStartDate = new Date('1948-05-16');
+        const encampmentStartDate = new Date('2024-05-06');
+
+        // Update counters with the calculated number of days
+        document.getElementById('genocide-counter').textContent = calculateDaysSince(genocideStartDate);
+        document.getElementById('occupation-counter').textContent = calculateDaysSince(occupationStartDate);
+        document.getElementById('encampment-counter').textContent = calculateDaysSince(encampmentStartDate);
+
+        window.addEventListener('DOMContentLoaded', function() {
+                    fetch('header.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('header-placeholder').innerHTML = html;
+                        });
+                });
+    </script>
+</body>
+</html>
