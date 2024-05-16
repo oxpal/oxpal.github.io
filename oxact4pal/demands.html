@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford Encampment</title>
+    <meta name="description" content="OXFORD ACTION FOR PALESTINE. For Palestinian liberation. Against Israeli genocide. All eyes on Gaza.">
+    <meta name="keywords" content="Oxford, Encampment, Palestine, activism, solidarity, social media, Gaza.">
+    <meta name="author" content="Oxford Action For Palestine">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href = index.html>
+                <img src="assets/logo.png" alt="Oxford Encampment Icon"></a>
+            </div>
+            <div class="title">
+                <em>OXFORD ACTION FOR PALESTINE.</em>
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home.</a>
+                        <a href="manifesto.html">Manifesto.</a>
+                        <a href="demands.html">Demands.</a>
+                        <a href="press.html">Press.</a>
+                        <a href="archive.html">Archive.</a>
+
+                        <!-- <a href="solidarity.html">In Solidarity.</a> -->
+
+                        <!-- <a href="oxford.html">Oxford, the Brain of Genocide.</a> -->
+    
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="side-panel">
+                <p class="how-to-get-involved"><em><strong>GET INVOLVED.</strong></em></p>
+                <button onclick="window.location.href='https://oxfordgazastudentsolidarity.wordpress.com/'">Sign the Student Letter</button>
+                <button onclick="window.location.href='https://oxfordgazastaffsolidarity.wordpress.com/'">Sign the Staff Letter</button>
+                <button onclick="window.location.href='https://oxfordgazanhssolidarity9.wordpress.com/'">Sign the Healthcare Solidarity Letter</button>
+                <button onclick="window.location.href='https://chuffed.org/project/109359-palestine-direct-action-fund'">Donate</button>
+                <p style="margin-top: 40px"><em><strong>SOCIAL MEDIA.</strong></em></p>
+                <button onclick="window.location.href='https://www.instagram.com/oxact4pal/'">Instagram</button>
+                <button onclick="window.location.href='https://twitter.com/OxAct4Pal'">Twitter</button>
+
+
+
+                <p style="margin-top: 40px"><em><strong>ALL EYES ON GAZA.</strong></em></p>
+            </div>   
+            <div class="main-content">
+                <div class="demands-section">
+                    <h1>Our Demands.</h1>
+                    <h2>1. DISCLOSE UNIVERSITY-WIDE ASSETS</h2>
+                    <ol>
+                        <li>Annually disclose a comprehensive account of University-wide assets, including direct and indirect investments, land holdings, donations, and grants.</li>
+                    </ol>
+                    <h2>2. DIVEST UNIVERSITY-WIDE ASSETS</h2>
+                    <ol>
+                        <li>Immediately divest University-wide direct and indirect holdings in all arms companies.</li>
+                        <li>Publicly pledge to completely divest University-wide direct and indirect holdings in all companies that are complicit in Israeli genocide, apartheid, and occupation of Palestine within the next 5 years.</li>
+                    </ol>
+                    <h2>3. OVERHAUL INVESTMENT POLICY</h2>
+                    <ol>
+                        <li>Expand the ethical restriction on arms manufacturers to cover direct and indirect investments in all arms and military technology companies.</li>
+                        <li>Add an ethical restriction to the Investment Policy on direct and indirect investments in companies that are complicit in Israeli genocide, apartheid, and occupation.</li>
+                        <li>Integrate community stakeholders in ethical investment review processes to ensure that all investment decisions adhere to justice-based guidelines.</li>
+                    </ol>
+                    <h2>4. BOYCOTT INSTITUTIONAL RELATIONSHIPS</h2>
+                    <ol>
+                        <li>End all institutional relationships with Israeli universities, including exchange programmes, joint projects, conferences and other official links.</li>
+                        <li>Pledge not to enter into future institutional relationships with Israeli universities as long as Israeli genocide, apartheid, or occupation is ongoing.</li>
+                        <li>End research, career, and procurement partnerships with companies and institutions that are complicit in Israeli genocide, apartheid, or occupation.</li>
+                    </ol>
+                    <h2>5. DROP BARCLAYS</h2>
+                    <ol>
+                        <li>In light of Barclays bank’s extensive investments in companies supplying Israel with weapons and military technology, the University of Oxford and its subsidiaries must stop banking with Barclays.</li>
+                    </ol>
+                    <h2>6. REBUILD AND REINVEST</h2>
+                    <ol>
+                        <li>Publicly commit to supporting, through financial and material means, the Palestinian-led rebuilding of the twelve universities that have been completely, or in part, destroyed by Israeli aggression in the last year.</li>
+                        <li>Establish and support a long-term task force composed of staff, students, and relevant Palestinian community members who will recommend how best to meet the call issued by Palestinian higher education institutions to rebuild the higher education sector in Gaza.</li>
+                        <li>Publicly commit to allocating resources in the interim to support scholars at risk in Palestine through, but not limited to, exchanges, joint projects, academic fellowships and partnerships, and scholarship programmes.</li>
+                    </ol>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024, all rights reserved. For media requests, contact <a href="mailto:press@oxact4pal.com">oxpalpress@proton.me</a>.</p>
+        </footer>
+    </div>
+
+     <script>
+        // JavaScript to toggle the dropdown menu
+        // JavaScript to toggle the dropdown menu
+        document.querySelector('.dropbtn').addEventListener('click', function() {
+            var dropdown = document.querySelector('.dropdown-content');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+            // Change the title when the button is clicked
+            if (window.innerWidth > 768) {
+                document.querySelector('.title em').textContent = "OXFORD IS ON THE WRONG SIDE OF HISTORY.";
+            }
+        });
+
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        // Function to calculate the number of days between two dates
+        // Function to calculate the number of days between two dates
+        function calculateDaysSince(startDate) {
+            const today = new Date();
+            const oneDay = 1000 * 60 * 60 * 24;
+            const diffInMs = today - startDate;
+            return Math.floor(diffInMs / oneDay);
+        }
+
+        // Define the start dates for each event
+        const genocideStartDate = new Date('2023-10-10');
+        const occupationStartDate = new Date('1948-05-16');
+        const encampmentStartDate = new Date('2024-05-06');
+
+        // Update counters with the calculated number of days
+        document.getElementById('genocide-counter').textContent = calculateDaysSince(genocideStartDate);
+        document.getElementById('occupation-counter').textContent = calculateDaysSince(occupationStartDate);
+        document.getElementById('encampment-counter').textContent = calculateDaysSince(encampmentStartDate);
+
+        window.addEventListener('DOMContentLoaded', function() {
+                    fetch('header.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('header-placeholder').innerHTML = html;
+                        });
+                });
+    </script>
+</body>
+</html>
