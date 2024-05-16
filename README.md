@@ -1,1 +1,1 @@
-Palestinian liberation.
+For the liberation of Palestine.
