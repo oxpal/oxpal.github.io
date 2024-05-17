@@ -339,9 +339,11 @@ footer {
     }
 
     .side-panel {
-        width: 100%; /* Make the sidebar take up full width */
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 20px; /* Add bottom margin to separate from main content */
+        width: 95%; /* Make the sidebar take up full width */
+        margin-right: 0; 
+        margin-bottom: 20px; 
+        border-right: 1px solid rgba(0, 0, 0, 0); /* Add faint black line for the right border */
+
     }
 
     .main-content {
@@ -376,6 +378,13 @@ footer {
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         margin-bottom: 10px; /* Adjust margin between buttons */
+    }
+
+    .main-why {
+        font-size: 20px;
+        padding-right: 0px;
+        text-align: justify;
+
     }
 }
 
