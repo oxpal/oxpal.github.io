@@ -381,9 +381,13 @@ footer {
     }
 
     .main-why {
-        font-size: 20px;
+        font-size: 18px;
         padding-right: 0px;
         text-align: justify;
+        padding-right: 10px;
+        padding-left: 10px;
+
+
 
     }
 }
