@@ -70,26 +70,47 @@ h1 {
 .press-releases {
     list-style: none;
     padding: 0;
+    margin: 0; /* Remove auto margins to avoid centering */
+    max-width: 600px; /* Set a maximum width */
 }
 
 .press-releases li {
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
 }
 
-.press-releases li a {
+.press-releases a {
+    padding-left: 30px;
+    display: flex;
+    width: 100%;
     text-decoration: none;
-    color: #002147;
-    font-size: 18px;
-    padding: 8px;
-    border: 2px solid #002147;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    color: inherit;
 }
 
-.press-releases li a:hover {
-    background-color: #002147;
-    color: white;
+.release-title {
+    flex: 1;
+    text-align: left;
+    margin: 0; /* Remove any default margin */
+    padding-left: 0; /* Ensure no padding on the left */
 }
+
+.release-date {
+    margin-left: 20px;
+    text-align: right;
+    color: #666;
+}
+
+/* Optional: Hover effect for better user experience */
+.press-releases li:hover {
+    background-color: #f9f9f9;
+}
+
+
+
+
+
 
 /* Add styles for the press articles */
 .main-content .press-articles {
@@ -392,5 +413,57 @@ footer {
     }
 }
 
+/* Mobile Styling for Press Releases */
+@media (max-width: 768px) {
+    .press-releases li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .press-releases li a {
+        width: 100%;
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .release-title {
+        flex: 1;
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .release-date {
+        text-align: right;
+        white-space: nowrap;
+        margin-left: auto;
+    }
+}
 
 
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .mobile-banner {
+        display: block;
+        width: 100%; /* Make the banner full width */
+        background-color: #002147; /* Use the same color as the buttons */
+        color: white;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none; /* Remove underline */
+        margin-bottom: 20px; /* Space below the banner */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    .mobile-banner:hover {
+        background-color: #0056b3; /* Darken the background on hover */
+    }
+}
+
+/* Hide the banner on larger screens */
+@media (min-width: 769px) {
+    .mobile-banner {
+        display: none;
+    }
+}
