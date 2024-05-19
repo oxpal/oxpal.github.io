@@ -441,6 +441,14 @@ footer {
 }
 
 
+.press-packet {
+            color: #002147;
+            text-decoration: none;
+        }
+        .press-packet:hover {
+            color: gray;
+        }
+
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .mobile-banner {
