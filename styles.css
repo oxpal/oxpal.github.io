@@ -475,3 +475,38 @@ footer {
         display: none;
     }
 }
+
+.social-icons {
+    margin-top: 40px;
+}
+.social-icons a {
+    text-decoration: none;
+    margin-top: 0px;
+    margin: 0 10px;
+    font-size: 2em;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .social-icons {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 10px; /* Optional: Add some padding for better spacing */
+    }
+
+    .social-icons a {
+        margin: 0; /* Remove margins to ensure icons are evenly spaced */
+        font-size: 2em; /* Ensure icons maintain their size */
+    }
+}
+
+
+.follow-us-text {
+    text-align: left;
+    margin-bottom: 10px; /* Adjust the margin as needed */
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.social-icons {
+    margin-top: 10px; /* Adjust the margin as needed */
+}
