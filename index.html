@@ -62,14 +62,14 @@
             </div>            
             <div class="main-content">
                 <div class="main-why">
-                    <strong>Oxford Action for Palestine</strong> is a collective of students, faculty, and staff at the University of Oxford who are <strong>committed to Palestinian liberation</strong>. We call on the University to <strong>divest from and boycott israel's criminal regime</strong>, end its <strong>complicity in scholasticide</strong>, and <strong>repair the injustices it perpetuates</strong> through a commitment to help rebuild Gaza's educational system.
+                    We are students, faculty, staff, and community members at the <strong>University of Oxford</strong> who are <strong>committed to Palestinian liberation</strong>. We call on the University to <strong>divest from and boycott israel's criminal regime</strong>, end its <strong>complicity in scholasticide</strong>, and <strong>repair the injustices it perpetuates</strong> through a commitment to supporting Palestinian-led rebuilding of education in Gaza.
                 </div>
                 <div class="counters">
-                    <h1 style= "margin-top: 40px;">Time Is of the Essence.</h1>
+                    <h1 style= "margin-top: 40px;">Action is Overdue.</h1>
 
                     <p>Days since encampment began: <span id="encampment-counter">0</span></p>
                     <p>Days since genocide began: <span id="genocide-counter">0</span></p>
-                    <p>Days since occupation began: <span id="occupation-counter">0</span></p>
+                    <p>Days since the Nakba began: <span id="occupation-counter">0</span></p>
                 </div>
                 <h1 style= "margin-top: 40px;">Press Releases.</h1>
                 <ul class="press-releases">
@@ -83,11 +83,11 @@
                                  <li><a href="assets/05 08 ICYMI VC AWARDS.pdf" target="_blank"><span class="release-title">We Deliver Demands In-Person to VC</span><span class="release-date">May 8</span></a></li>
                                  <li><a href="assets/05 06 PR LAUNCH.pdf" target="_blank"><span class="release-title">Oxford Students Launch Encampment</span><span class="release-date">May 6</span></a></li>
                              </ul>
-                <h1 style="margin-top: 40px;">Oxford Is Complicit.</h1>
+           <!--      <h1 style="margin-top: 40px;">Oxford Is Complicit.</h1>
                 <blockquote>
                     <p>"You are being invited to help make history. That cannot frighten you, nor will you laugh at it. It is not in your accustomed line; it doesn't involve Africa, but a piece of Asia Minor, not Englishmen but Jews. But had this been on your path, you would have done it by now. How, then, do I happen to turn to you, since this is an out-of-the-way matter for you? How indeed? Because it is something colonial."</p>
                     <footer><em> &mdash;Theodor Herzl, the father of modern Zionism, requesting the aid of Oxford’s Cecil Rhodes</em></footer>
-                </blockquote>
+                </blockquote> -->
 
             </div>
         </main>
@@ -126,12 +126,12 @@
 
         // Define the start dates for each event
         const genocideStartDate = new Date('2023-10-07');
-        const occupationStartDate = new Date('1948-05-16');
+        const nakbaStartDate = new Date('1948-05-16');
         const encampmentStartDate = new Date('2024-05-06');
 
         // Update counters with the calculated number of days
         document.getElementById('genocide-counter').textContent = calculateDaysSince(genocideStartDate);
-        document.getElementById('occupation-counter').textContent = calculateDaysSince(occupationStartDate);
+        document.getElementById('occupation-counter').textContent = calculateDaysSince(nakbaStartDate);
         document.getElementById('encampment-counter').textContent = calculateDaysSince(encampmentStartDate);
 
         window.addEventListener('DOMContentLoaded', function() {
