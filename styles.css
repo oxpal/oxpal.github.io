@@ -384,6 +384,7 @@ footer {
         height: auto; /* Adjust height to fit content */
         padding: 6px 12px; /* Add padding to adjust button size */
         font-size: 13px; /* Adjust font size */
+
     }
 
     .main-content .press-articles {
@@ -511,3 +512,20 @@ footer {
 .social-icons {
     margin-top: 10px; /* Adjust the margin as needed */
 }
+
+.press-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #002147; /* Button background color */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    margin-bottom:  30px;
+}
+
+.press-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
