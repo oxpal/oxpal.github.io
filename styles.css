@@ -495,6 +495,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    .how-to-get-involved {
+        margin-top: 40px;
+    }
     .social-icons {
         display: flex;
         justify-content: space-around;
@@ -505,6 +509,7 @@ footer {
         margin: 0; /* Remove margins to ensure icons are evenly spaced */
         font-size: 2em; /* Ensure icons maintain their size */
     }
+
 }
 
 
@@ -534,6 +539,23 @@ footer {
     background-color: #0056b3; /* Darker shade on hover */
 }
 
+.demands-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #002147; /* Button background color */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    margin-bottom:  30px;
+}
+
+.demands-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
 
 @media (min-width: 768px) {
     .main-content {
@@ -541,6 +563,8 @@ footer {
         padding-right:  80px;
 
 }
+
+
 
 
 
