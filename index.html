@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🇵🇸 Oxford Action For Palestine</title>
     <meta name="description" content="OXFORD ACTION FOR PALESTINE. For Palestinian liberation. Against Israeli genocide. All eyes on Gaza.">
-    <meta name="keywords" content="Oxford, Encampment, Palestine, activism, solidarity, social media, Gaza.">
+    <meta name="keywords" content="Oxford Action for Palestine, Oxford Encampment, Palestine, activism, solidarity, social media, Gaza.">
     <meta name="author" content="Oxford Action For Palestine">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -98,23 +98,20 @@
 
     <script>
         // JavaScript to toggle the dropdown menu
-        document.querySelector('.dropbtn').addEventListener('click', function(event) {
-            event.stopPropagation();  // Prevent event from bubbling up to window
-            var dropdown = document.querySelector('.dropdown-content');
-            dropdown.classList.toggle('show');
-            // Change the title when the button is clicked
-            if (window.innerWidth > 768) {
-                document.querySelector('.title em').textContent = "OXFORD IS ON THE WRONG SIDE OF HISTORY.";
-            }
-        });
+      // JavaScript to toggle the dropdown menu
+      document.querySelector('.dropbtn').addEventListener('click', function(event) {
+          event.stopPropagation();  // Prevent event from bubbling up to window
+          var dropdown = document.querySelector('.dropdown-content');
+          dropdown.classList.toggle('show');
+      });
 
-        // Close the dropdown menu if the user clicks outside of it
-        window.addEventListener('click', function(event) {
-            var dropdown = document.querySelector('.dropdown-content');
-            if (!event.target.closest('.dropbtn') && dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
-            }
-        });
+      // Close the dropdown menu if the user clicks outside of it
+      window.addEventListener('click', function(event) {
+          var dropdown = document.querySelector('.dropdown-content');
+          if (!event.target.closest('.dropbtn') && dropdown.classList.contains('show')) {
+              dropdown.classList.remove('show');
+          }
+      });
 
         // Function to calculate the number of days between two dates
         function calculateDaysSince(startDate) {

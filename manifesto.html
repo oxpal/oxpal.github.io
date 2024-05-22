@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🇵🇸 Oxford Action For Palestine</title>
     <meta name="description" content="OXFORD ACTION FOR PALESTINE. For Palestinian liberation. Against Israeli genocide. All eyes on Gaza.">
-    <meta name="keywords" content="Oxford, Encampment, Palestine, activism, solidarity, social media, Gaza.">
+    <meta name="keywords" content="Oxford Action for Palestine, Manifesto, Oxford Encampment, Palestine, activism, solidarity, social media, Gaza.">
     <meta name="author" content="Oxford Action For Palestine">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -116,51 +116,48 @@
         </footer>
     </div>
 
-    <script>
-        // JavaScript to toggle the dropdown menu
-        document.querySelector('.dropbtn').addEventListener('click', function(event) {
-            event.stopPropagation();  // Prevent event from bubbling up to window
-            var dropdown = document.querySelector('.dropdown-content');
-            dropdown.classList.toggle('show');
-            // Change the title when the button is clicked
-            if (window.innerWidth > 768) {
-                document.querySelector('.title em').textContent = "OXFORD IS ON THE WRONG SIDE OF HISTORY.";
+        <script>
+            // JavaScript to toggle the dropdown menu
+            document.querySelector('.dropbtn').addEventListener('click', function(event) {
+                event.stopPropagation();  // Prevent event from bubbling up to window
+                var dropdown = document.querySelector('.dropdown-content');
+                dropdown.classList.toggle('show');
+            });
+
+
+            // Close the dropdown menu if the user clicks outside of it
+            window.addEventListener('click', function(event) {
+                var dropdown = document.querySelector('.dropdown-content');
+                if (!event.target.closest('.dropbtn') && dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            });
+
+            // Function to calculate the number of days between two dates
+            function calculateDaysSince(startDate) {
+                const today = new Date();
+                const oneDay = 1000 * 60 * 60 * 24;
+                const diffInMs = today - startDate;
+                return Math.floor(diffInMs / oneDay);
             }
-        });
 
-        // Close the dropdown menu if the user clicks outside of it
-        window.addEventListener('click', function(event) {
-            var dropdown = document.querySelector('.dropdown-content');
-            if (!event.target.closest('.dropbtn') && dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
-            }
-        });
+            // Define the start dates for each event
+            const genocideStartDate = new Date('2023-10-07');
+            const nakbaStartDate = new Date('1948-05-16');
+            const encampmentStartDate = new Date('2024-05-06');
 
-        // Function to calculate the number of days between two dates
-        function calculateDaysSince(startDate) {
-            const today = new Date();
-            const oneDay = 1000 * 60 * 60 * 24;
-            const diffInMs = today - startDate;
-            return Math.floor(diffInMs / oneDay);
-        }
+            // Update counters with the calculated number of days
+            document.getElementById('genocide-counter').textContent = calculateDaysSince(genocideStartDate);
+            document.getElementById('occupation-counter').textContent = calculateDaysSince(nakbaStartDate);
+            document.getElementById('encampment-counter').textContent = calculateDaysSince(encampmentStartDate);
 
-        // Define the start dates for each event
-        const genocideStartDate = new Date('2023-10-10');
-        const occupationStartDate = new Date('1948-05-16');
-        const encampmentStartDate = new Date('2024-05-06');
-
-        // Update counters with the calculated number of days
-        document.getElementById('genocide-counter').textContent = calculateDaysSince(genocideStartDate);
-        document.getElementById('occupation-counter').textContent = calculateDaysSince(occupationStartDate);
-        document.getElementById('encampment-counter').textContent = calculateDaysSince(encampmentStartDate);
-
-        window.addEventListener('DOMContentLoaded', function() {
-            fetch('header.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById('header-placeholder').innerHTML = html;
-                });
-        });
-    </script>
-</body>
-</html>
+            window.addEventListener('DOMContentLoaded', function() {
+                fetch('header.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById('header-placeholder').innerHTML = html;
+                    });
+            });
+        </script>
+    </body>
+    </html>

@@ -1,8 +1,5 @@
 /* Reset some basic elements */
-@font-face {
-    font-family: 'PT Serif';
-    src: url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 body, h1, ul, li {
     margin: 0;
@@ -10,12 +7,15 @@ body, h1, ul, li {
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+
+
+
 
 .container {
     flex: 1;
@@ -194,14 +194,28 @@ h1 {
 }
 
 .dropbtn {
+    background-color: #002147; /* Change to desired background color */
     color: white;
-    padding: 16px;
+    padding: 10px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
     font-size: 16px;
     border: none;
     cursor: pointer;
     background-color: #002147; /* Add background color for visibility */
     border-radius: 5px;
 }
+
+.dropbtn .bar1, .dropbtn .bar2, .dropbtn .bar3 {
+    width: 25px;
+    height: 3px;
+    background-color: white; /* Ensure the bars are visible */
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
 
 .dropdown {
     position: relative;
@@ -211,56 +225,41 @@ h1 {
 .dropdown-content {
     display: none;
     position: absolute;
-    right: 0; /* Align the dropdown to the left of the button */
-    min-width: 225px; /* Increase the width of the dropdown */
+    right: 0;
+    min-width: 185px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    background-color: #ffffff; /* Change to solid white background */
-    border-radius: 5px; /* Optional: add some border-radius */
-    padding: 15px; /* Add padding for better appearance */
-
+    background-color: #002147; /* Set dropdown background color to blue */
+    border-radius: 5px;
+    padding: 0; /* Remove padding */
 }
 
-/* Style the dropdown content links */
 .dropdown-content a {
-    color: black;
-    padding: 12px 20px; /* Add horizontal padding */
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    margin: 0; /* Remove margin */
     text-decoration: none;
     display: block;
-    border-radius: 5px; /* Add border radius */
-    transition: background-color 0.3s, color 0.3s; /* Add transition for smoother hover effect */
-    text-transform: uppercase; /* Convert text to uppercase */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Add faint black line between buttons */
+    transition: background-color 0.3s, color 0.3s;
+    text-align: right; /* Align text to the right */
+    font-weight: bold; /* Make text bold */
+    text-transform: uppercase;
+    border-radius: 5px; /* Round the edges */
 }
 
-/* Hover effect for dropdown content links */
-.dropdown-content a:hover {
-    background-color: #f1f1f1; /* Change background color on hover */
-    color: #002147; /* Change text color on hover */
+.dropdown-content a:last-child {
+    border-bottom: none; /* Remove bottom border from last button */
 }
-
-
 
 .show {
     display: block;
 }
 
-/* Adjust dropdown button appearance */
-.dropbtn {
-    background-color: #002147; /* Change to desired background color */
-    color: white;
-    padding: 10px; /* Adjust padding as needed */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.dropbtn .bar1, .dropbtn .bar2, .dropbtn .bar3 {
-    width: 25px;
-    height: 3px;
-    background-color: white; /* Ensure the bars are visible */
-    margin: 4px 0;
-    transition: 0.4s;
+/* Hover effect for dropdown content links */
+.dropdown-content a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 
@@ -288,13 +287,12 @@ h1 {
 }
 .main-why {
     padding-top: 10px;
-    font-size: 24px; /* Increase font size */
+    font-size: 20px; /* Increase font size */
     padding-right: 100px;
 }
 
 .main-why strong {
     font-weight: bold; /* Make important parts bold */
-    color: #002147; /* Set custom color for important parts */
 }
 
 /* Style for the counters */
@@ -305,8 +303,9 @@ h1 {
 
 .counters p {
     font-size: 20px;
+    margin-left: 5px;
     margin-bottom: 0; /* Remove margin-bottom */
-    line-height: 1; /* Set line height to 1 to align numbers vertically */
+    line-height: 1.25; /* Set line height to 1 to align numbers vertically */
 }
 
 /* Style for the counters */
@@ -403,15 +402,21 @@ footer {
     }
 
     .main-why {
-        font-size: 18px;
+        font-size: 16px;
         padding-right: 0px;
         text-align: justify;
         padding-right: 10px;
         padding-left: 10px;
-
-
-
     }
+    .counters p {
+            font-size: 16px;
+            margin-left: 5px;
+            margin-bottom: 0; /* Remove margin-bottom */
+            line-height: 1.25; /* Set line height to 1 to align numbers vertically */
+    }
+
+
+
 }
 
 /* Mobile Styling for Press Releases */
@@ -528,4 +533,15 @@ footer {
 .press-button:hover {
     background-color: #0056b3; /* Darker shade on hover */
 }
+
+
+@media (min-width: 768px) {
+    .main-content {
+        max-width: 1000px;
+        padding-right:  80px;
+
+}
+
+
+
 
