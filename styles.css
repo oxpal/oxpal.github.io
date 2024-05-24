@@ -564,8 +564,58 @@ footer {
 
 }
 
+.main-content .main-links a:link,
+.main-content .main-links a:visited {
+    color: #002147;
+    text-decoration: none;
+}
 
 
 
+.button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
 
+.demands-button {
+    display: inline-block;
+    width: 200px; /* Set a fixed width for all buttons */
+    padding: 10px 0; /* Adjust padding to center text vertically */
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #002147; /* Button background color */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    margin-bottom: 30px;
+    text-align: center; /* Center text horizontally */
+}
+
+.demands-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.demands-button {
+    display: inline-block;
+    width: 400px; /* Set a fixed width for all buttons */
+    padding: 10px 0; /* Adjust padding to center text vertically */
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #002147; /* Button background color */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    text-align: center; /* Center text horizontally */
+}
+
+.demands-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
 
