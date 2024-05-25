@@ -14,9 +14,6 @@ body {
     min-height: 100vh;
 }
 
-
-
-
 .container {
     flex: 1;
 }
@@ -190,7 +187,6 @@ h1 {
 
 .main-content {
     flex: 1;
-
 }
 
 .dropbtn {
@@ -549,7 +545,6 @@ footer {
     text-decoration: none;
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s ease; /* Smooth transition effect */
-    margin-bottom:  30px;
 }
 
 .demands-button:hover {
@@ -561,6 +556,11 @@ footer {
     .main-content {
         max-width: 1000px;
         padding-right:  80px;
+    }
+    .demands-button {
+        margin-bottom:  30px;
+
+    }
 
 }
 
@@ -571,51 +571,52 @@ footer {
 }
 
 
+/* Existing styles */
 
+/* Existing styles */
+
+/* Add this to your existing CSS */
 .button-container {
     display: flex;
-    gap: 10px; /* Space between buttons */
+    flex-direction: row; /* Default to row for larger screens */
+    justify-content: left;
+    gap: 10px;
 }
 
 .demands-button {
-    display: inline-block;
-    width: 200px; /* Set a fixed width for all buttons */
-    padding: 10px 0; /* Adjust padding to center text vertically */
-    margin-top: 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #002147; /* Button background color */
     text-decoration: none;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition effect */
-    margin-bottom: 30px;
-    text-align: center; /* Center text horizontally */
+    background-color: #002147;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
 }
 
 .demands-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3;
+    transform: scale(1.02);
 }
 
-.button-container {
-    display: flex;
-    gap: 10px; /* Space between buttons */
+@media (max-width: 768px) {
+    /* Adjust margin for the first demands-button */
+    .button-container .demands-button:first-child {
+        margin-bottom: 0 !important; /* Remove margin bottom for the first button */
+    }
 }
 
-.demands-button {
-    display: inline-block;
-    width: 400px; /* Set a fixed width for all buttons */
-    padding: 10px 0; /* Adjust padding to center text vertically */
-    margin-top: 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #002147; /* Button background color */
-    text-decoration: none;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition effect */
-    text-align: center; /* Center text horizontally */
+@media (max-width: 768px) {
+    /* Adjust margin for the first demands-button */
+    .button-container .demands-button:last-child {
+        margin-top: 10px !important; /* Remove margin bottom for the first button */
+        margin-bottom: 20px !important; /* Remove margin bottom for the first button */
+    }
 }
 
-.demands-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+    }
 }
 
