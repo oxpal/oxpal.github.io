@@ -222,7 +222,7 @@ h1 {
     display: none;
     position: absolute;
     right: 0;
-    min-width: 185px;
+    min-width: 190px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     background-color: #002147; /* Set dropdown background color to blue */
@@ -620,3 +620,79 @@ footer {
     }
 }
 
+.navigation-buttons {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.nav-button {
+    padding: 5px 10px; /* Smaller padding */
+    margin: 3px;
+    text-decoration: none;
+    color: #ffffff; /* White text color */
+    background-color: #002147; /* Blue background color */
+    border: 1px solid #002147; /* Blue border color */
+    border-radius: 5px;
+    font-size: 12px; /* Smaller font size */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #ffffff; /* Ensure text stays white on hover */
+}
+
+/* Hide navigation buttons on smaller screens */
+/*@media (max-width: 768px) {
+    .navigation-buttons {
+        display: none;
+    }
+}*/
+
+/* Style for statement dates */
+.statement-date {
+    float: right;
+    color: #666;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Ensure statement links have enough space for date */
+/* Style for statement links and dates */
+.support-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.support-link:hover {
+    background-color: #f9f9f9;
+}
+
+.statement-date {
+    color: #666;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+
+/* Optional: Better alignment and padding for signature list */
+.signature {
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .support-link {
+        flex-direction: row; /* Ensure items are in a row */
+        justify-content: space-between;
+    }
+
+    .statement-date {
+        white-space: nowrap; /* Prevent line break */
+    }
+}
