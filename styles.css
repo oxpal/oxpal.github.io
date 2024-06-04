@@ -105,10 +105,6 @@ h1 {
 }
 
 
-
-
-
-
 /* Add styles for the press articles */
 .main-content .press-articles {
     display: flex;
@@ -168,7 +164,7 @@ h1 {
 
 .side-panel button {
     display: block;
-    width: 180px;
+    width: 200px;
     height: 40px;
     margin-bottom: 10px;
     background-color: #002147;
@@ -322,6 +318,7 @@ footer {
     background-color: white;
     text-align: center;
     padding: 10px;
+    margin-top: auto;
 }
 
 .archive {
@@ -357,7 +354,7 @@ footer {
     .side-panel {
         width: 95%; /* Make the sidebar take up full width */
         margin-right: 0; 
-        margin-bottom: 20px; 
+/*        margin-bottom: 20px; */
         border-right: 1px solid rgba(0, 0, 0, 0); /* Add faint black line for the right border */
 
     }
@@ -490,6 +487,12 @@ footer {
     color: inherit;
 }
 
+.follow-us-text {
+    text-align: left;
+    margin-bottom: 10px; /* Adjust the margin as needed */
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
 @media (max-width: 768px) {
 
     .how-to-get-involved {
@@ -505,15 +508,13 @@ footer {
         margin: 0; /* Remove margins to ensure icons are evenly spaced */
         font-size: 2em; /* Ensure icons maintain their size */
     }
+    .follow-us-text {
+        margin-top: 40px; /* Adjust the margin as needed */
+    }
 
 }
 
 
-.follow-us-text {
-    text-align: left;
-    margin-bottom: 10px; /* Adjust the margin as needed */
-    margin-top: 20px; /* Adjust the margin as needed */
-}
 
 .social-icons {
     margin-top: 10px; /* Adjust the margin as needed */
