@@ -24,7 +24,7 @@
     <div class="container">
         <header>
             <div class="logo">
-                <a href="index.html">
+                <a href = index.html>
                 <img src="assets/logo.png" alt="Oxford Encampment Icon"></a>
             </div>
             <div class="title">
@@ -89,7 +89,6 @@
 
                <a class="support-link" href="oacs.html">Oxford African-Caribbean Society<span class="statement-date">26 May</span></a>
                <a class="support-link" href="ops.html">Oxford Philippines Society<span class="statement-date">25 May</span></a>
-               <a class="support-link" href="https://www.uncomfortableoxford.com/oxfords-activist-pasts-and-present-in-solidarity-with-oxford-action-for-palestine">Uncomfortable Oxford<span class="statement-date">19 May</span></a>
                <a class="support-link" href="councillors.html">Oxford Community Independent Councillors<span class="statement-date">17 May</span></a>
                <a class="support-link" href="unions.html">Oxford and Reading Trade Unions Stand in Solidarity<span class="statement-date">17 May</span></a>
                <a class="support-link" href="https://oxfordgazastudentsolidarity.wordpress.com/">2,650+ Students Sign Letter in Support of Encampment<span class="statement-date">16 May</span></a>
@@ -98,49 +97,84 @@
                <a class="support-link" href="https://oxfordgazastaffsolidarity.wordpress.com/">600+ Faculty and Staff Sign Letter in Support of Encampment<span class="statement-date">6 May</span></a>
 
 
-                <h3>College Common Rooms in Support of Our Demands</h3>
-                <div class="common-rooms">
-                    <div class="undergraduate">
-                        <h4><em>Undergraduate</em></h4>
-                        <p class="signature">
-                           Balliol <br>
-                           Exeter <br>
-                           Harris Manchester <br>
-                           Hertford <br>
-                           Jesus <br>
-                           Magdalen <br>
-                           Pembroke <br>
-                           Somerville <br>
-                           St Anne's <br>
-                           St Edmund Hall <br>
-                           St Hugh's <br>
-                           University <br>
-                           Wadham <br>
-                           Worcester
-                        </p>
-                    </div>
-                    <div class="postgraduate">
-                        <h4><em>Postgraduate</em></h4>
-                        <p class="signature">
-                           Balliol <br>
-                           Christ Church <br>
-                           Corpus Christi <br>
-                           Exeter <br>
-                           Lincoln <br>
-                           Magdalen <br>
-                           New <br>
-                           Nuffield <br>
-                           Pembroke <br>
-                           Reuben <br>
-                           Somerville <br>
-                           St Anne's <br>
-                           St Antony's <br>
-                           St Catherine's <br>
-                           Wadham
-                        </p>
-                    </div>
-                </div>
+                <h3>College Common Rooms in Support of Our Demands</h2>
+                <p class="signature">
+               Balliol JCR <br>
+               Balliol MCR <br>
+               Exeter JCR <br>
+               Exeter MCR <br>
+               Hertford JCR <br>
+               Jesus JCR <br>
+               Lincoln MCR <br>
+               Magdalen JCR <br>
+               Nuffield JCR <br>
+               Pembroke JCR <br>
+               Reuben GCR <br>
+               Somerville JCR <br>
+               Somerville MCR <br>
+               St Anne's JCR  <br>
+               St Anne's MCR <br>
+               St Antony's GCR <br>
+               St Catherine's MCR <br>
+               St Edmund Hall JCR <br>
+               St Hugh's JCR <br>
+               University JCR <br>
+               Wadham JCR <br>
+               Wadham MCR <br>
+               Worcester JCR
+                </p>
+
+
+
             </div>
         </main>
        <footer>
-            <p>🇵🇸 &copy; 2024, all rights reserved. For media requests, contact <a
+            <p>🇵🇸 &copy; 2024, all rights reserved. For media requests, contact <a href="mailto:press@oxact4pal.com">oxpalpress@proton.me</a>.</p>
+        </footer>
+    </div>
+
+        <script>
+            // JavaScript to toggle the dropdown menu
+            document.querySelector('.dropbtn').addEventListener('click', function(event) {
+                event.stopPropagation();  // Prevent event from bubbling up to window
+                var dropdown = document.querySelector('.dropdown-content');
+                dropdown.classList.toggle('show');
+            });
+
+
+            // Close the dropdown menu if the user clicks outside of it
+            window.addEventListener('click', function(event) {
+                var dropdown = document.querySelector('.dropdown-content');
+                if (!event.target.closest('.dropbtn') && dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            });
+
+            // Function to calculate the number of days between two dates
+            function calculateDaysSince(startDate) {
+                const today = new Date();
+                const oneDay = 1000 * 60 * 60 * 24;
+                const diffInMs = today - startDate;
+                return Math.floor(diffInMs / oneDay);
+            }
+
+            // Define the start dates for each event
+            const genocideStartDate = new Date('2023-10-07');
+            const nakbaStartDate = new Date('1948-05-16');
+            const encampmentStartDate = new Date('2024-05-05');
+
+            // Update counters with the calculated number of days
+            document.getElementById('genocide-counter').textContent = calculateDaysSince(genocideStartDate);
+            document.getElementById('occupation-counter').textContent = calculateDaysSince(nakbaStartDate);
+            document.getElementById('encampment-counter').textContent = calculateDaysSince(encampmentStartDate);
+
+            window.addEventListener('DOMContentLoaded', function() {
+                fetch('header.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById('header-placeholder').innerHTML = html;
+                    });
+            });
+        </script>
+    </body>
+    </html>
