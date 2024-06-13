@@ -697,3 +697,51 @@ footer {
         white-space: nowrap; /* Prevent line break */
     }
 }
+.styled-quote {
+   border-left: 2px solid #d3d3d3; /* Thin gray line */
+   padding-left: 10px; /* Indent */
+   margin-left: 20px; /* Additional indent for visual effect */
+   color: #333; /* Optional: change text color for better readability */
+   font-style: italic; /* Optional: italicize text for quote style */
+}
+
+.two-column-container {
+    display: flex;
+    gap: 20px;
+}
+
+.two-column-item {
+    flex: 1;
+}
+
+.two-column-item ul {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0;
+}
+
+.two-column-item ul li {
+    margin-bottom: 10px; /* Adds space between list items */
+}
+
+.two-column-item ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: #002147;; /* Sets the link color */
+    margin-left: 20px;
+}
+
+.two-column-item ul li a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+.common-rooms {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.undergraduate, .postgraduate {
+    width: 48%;
+}
+
+.signature {
+    margin: 0;
+}
