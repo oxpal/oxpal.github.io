@@ -578,6 +578,7 @@ footer {
 
 /* Add this to your existing CSS */
 .button-container {
+    margin-top: 10px;
     display: flex;
     flex-direction: row; /* Default to row for larger screens */
     justify-content: left;
