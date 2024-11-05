@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇵🇸 Oxford Action For Palestine</title>
+    <meta name="description" content="OXFORD ACTION FOR PALESTINE. For Palestinian liberation. Against Israeli genocide. All eyes on Gaza.">
+    <meta name="keywords" content="Oxford Action for Palestine, oxact4pal, Manifesto, Oxford Encampment, Palestine, activism, solidarity, social media, Gaza.">
+    <meta name="author" content="Oxford Action For Palestine">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="assets/logo.png" type="image/x-icon">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5ENGEFQQFY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5ENGEFQQFY');
+</script>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href = index.html>
+                <img src="assets/logo.png" alt="Oxford Encampment Icon"></a>
+            </div>
+            <div class="title">
+                <em>OXFORD ACTION FOR PALESTINE.</em>
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </button>
+                   <div class="dropdown-content">
+                       <a href="index.html">Home.</a>
+                       <a href="statements.html">Our Statements.</a>
+                       <a href="demands.html">Our Demands.</a>
+                       <a href="support.html">Support from the Community.</a>
+                       <a href="press.html">Press Releases.</a>
+                       <a href="inthenews.html">In The News.</a>
+                       <a href="archive.html">Photos.</a>
+                   </div>
+                </div>
+            </nav>
+        </header>
+  <a href="https://oa4p.substack.com/" class="mobile-banner">Join Our Substack</a>
+  <main>
+      <div class="side-panel">
+          <p class="how-to-get-involved"><em><strong>SIGN THE LETTERS.</strong></em></p>
+          <button onclick="window.location.href='https://oxfordgazastudentsolidarity.wordpress.com/'">Students</button>
+          <button onclick="window.location.href='https://oxfordgazastaffsolidarity.wordpress.com/'">Faculty and Staff</button>
+          <button onclick="window.location.href='https://oxfordgazanhssolidarity9.wordpress.com/'">Healthcare Workers</button>
+
+         <p class="how-to-get-involved"><em><strong>TAKE ACTION.</strong></em></p>
+         <button onclick="window.location.href='https://form.jotform.com/242743836000349?utm_source=substack&utm_medium=email'">Join OA4P</button>
+         <button onclick="window.location.href='https://oa4p.substack.com/'">Join Our Substack</button>
+         <button onclick="window.location.href='https://chuffed.org/project/109359-palestine-direct-action-fund'">Donate</button>
+         <button onclick="window.location.href='https://ugc.production.linktr.ee/564ea90e-6c8e-40de-a4a6-501a1f886ef6_Email-Template--Alumni-Solidarity-Letter.doc.pdf'">Alumni Email Template</button>
+
+
+
+                   <p class="follow-us-text"><em><strong>FOLLOW US.</strong></em></p>
+                   <div class="social-icons">
+                       <a href="https://www.instagram.com/oxact4pal/" target="_blank"><i class="fab fa-instagram"></i></a>
+                       <a href="https://www.tiktok.com/@oxact4pal" target="_blank"><i class="fab fa-tiktok"></i></a>
+                       <a href="https://twitter.com/OxAct4Pal" target="_blank"><i class="fab fa-twitter"></i></a>
+                   </div>
+
+
+                <p style="margin-top: 40px"><em><strong>ALL EYES ON GAZA.</strong></em></p>
+            </div>   
+            <div class="main-content">
+
+                <h3>In Solidarity with Palestine Action</h3>
+                <p><em>15 October 2024</em></p>
+                
+                <p>On Sunday night, Palestine Action targeted Oxford University's administrative offices at Wellington Square, as part of its efforts to disrupt and counter complicit institutions. While this action is not affiliated with OA4P, we acknowledge our shared goals in highlighting the complicity of the University of Oxford in israeli occupation, apartheid, and genocide. We, alongside members of the broader Oxford community, will not rest while the University remains complicit, exemplified by the ongoing work of Palestine Action and OA4P.</p>
+                
+            </main>
+       <footer>
+            <p>🇵🇸 &copy; 2024, all rights reserved. For media requests, contact <a href="mailto:press@oxact4pal.com">oxpalpress@proton.me</a>.</p>
+        </footer>
+    </div>
+
+        <script>
+            // JavaScript to toggle the dropdown menu
+            document.querySelector('.dropbtn').addEventListener('click', function(event) {
+                event.stopPropagation();  // Prevent event from bubbling up to window
+                var dropdown = document.querySelector('.dropdown-content');
+                dropdown.classList.toggle('show');
+            });
+
+
+            // Close the dropdown menu if the user clicks outside of it
+            window.addEventListener('click', function(event) {
+                var dropdown = document.querySelector('.dropdown-content');
+                if (!event.target.closest('.dropbtn') && dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            });
+
+            // Function to calculate the number of days between two dates
+            function calculateDaysSince(startDate) {
+                const today = new Date();
+                const oneDay = 1000 * 60 * 60 * 24;
+                const diffInMs = today - startDate;
+                return Math.floor(diffInMs / oneDay);
+            }
+
+            // Define the start dates for each event
+            const genocideStartDate = new Date('2023-10-07');
+            const nakbaStartDate = new Date('1948-05-16');
+            const encampmentStartDate = new Date('2024-05-05');
+
+            // Update counters with the calculated number of days
+            document.getElementById('genocide-counter').textContent = calculateDaysSince(genocideStartDate);
+            document.getElementById('occupation-counter').textContent = calculateDaysSince(nakbaStartDate);
+            document.getElementById('encampment-counter').textContent = calculateDaysSince(encampmentStartDate);
+
+            window.addEventListener('DOMContentLoaded', function() {
+                fetch('header.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById('header-placeholder').innerHTML = html;
+                    });
+            });
+        </script>
+    </body>
+    </html>
