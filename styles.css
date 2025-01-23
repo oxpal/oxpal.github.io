@@ -18,6 +18,10 @@ body {
     flex: 1;
 }
 
+#header-placeholder {
+    height: 120px; /* The real header has an 80px logo and 20px padding on either side */
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -151,7 +155,9 @@ h1 {
     background-color: #f5f5f5; /* Lighter background on hover */
 }
 
-
+#side-panel-placeholder {
+    width: 220px; /* The real side panel has 200px buttons and 10px padding on either side */
+}
 
 .side-panel {
     padding: 10px;

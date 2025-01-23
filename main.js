@@ -1,41 +1,38 @@
-// JavaScript to toggle the dropdown menu
-document.querySelector('.dropbtn').addEventListener('click', function (event) {
-    event.stopPropagation();  // Prevent event from bubbling up to window
-    var dropdown = document.querySelector('.dropdown-content');
-    dropdown.classList.toggle('show');
-});
+function setup_header() {
+    // JavaScript to toggle the dropdown menu
+    document.querySelector('.dropbtn').addEventListener('click', function (event) {
+        event.stopPropagation();  // Prevent event from bubbling up to window
+        const dropdown = document.querySelector('.dropdown-content');
+        dropdown.classList.toggle('show');
+    });
 
 
-// Close the dropdown menu if the user clicks outside of it
-window.addEventListener('click', function (event) {
-    var dropdown = document.querySelector('.dropdown-content');
-    if (!event.target.closest('.dropbtn') && dropdown.classList.contains('show')) {
-        dropdown.classList.remove('show');
-    }
-});
-
-// Function to calculate the number of days between two dates
-function calculateDaysSince(startDate) {
-    const today = new Date();
-    const oneDay = 1000 * 60 * 60 * 24;
-    const diffInMs = today - startDate;
-    return Math.floor(diffInMs / oneDay);
+    // Close the dropdown menu if the user clicks outside of it
+    window.addEventListener('click', function (event) {
+        const dropdown = document.querySelector('.dropdown-content');
+        if (!event.target.closest('.dropbtn') && dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+        }
+    });
 }
 
-// Define the start dates for each event
-const genocideStartDate = new Date('2023-10-07');
-const nakbaStartDate = new Date('1948-05-16');
-const encampmentStartDate = new Date('2024-05-05');
+// The calls below to dynamically load content only work from an HTTP(S) server, because fetch requests don't play nicely with file URIs
+if (window.location.href.startsWith("file")) {
+    alert(
+        "The site now needs to be loaded from an HTTP(S) server in order to function, but you've loaded the page from a file:// url.\n" +
+        "Any web server will do - for local development, try running the builtin python webserver using `python3 -m http.server`, then viewing the page at http://localhost:8000"
+    );
+}
 
-// Update counters with the calculated number of days
-document.getElementById('genocide-counter').textContent = calculateDaysSince(genocideStartDate);
-document.getElementById('occupation-counter').textContent = calculateDaysSince(nakbaStartDate);
-document.getElementById('encampment-counter').textContent = calculateDaysSince(encampmentStartDate);
+fetch("templates/header.html")
+    .then(res => res.text())
+    .then(text => {
+        document.getElementById("header-placeholder").outerHTML = text;
+        setup_header();
+    });
 
-window.addEventListener('DOMContentLoaded', function () {
-    fetch('header.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('header-placeholder').innerHTML = html;
-        });
-});
+fetch("templates/side-panel.html")
+    .then(res => res.text())
+    .then(text => {
+        document.getElementById("side-panel-placeholder").outerHTML = text;
+    });
