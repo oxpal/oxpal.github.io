@@ -168,10 +168,22 @@ h1 {
 }
 
 
-.side-panel button {
-    display: block;
+.side-panel .link {
+    display: inline-block;
+    padding: 5px 0px;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #002147; /* Button background color */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+
     width: 200px;
-    height: 40px;
+    text-align: center;
+    
+    /* display: block;
+    height: 40px; 
     margin-bottom: 10px;
     background-color: #002147;
     color: white;
@@ -179,10 +191,10 @@ h1 {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s; */
 }
 
-.side-panel button:hover {
+.side-panel .link:hover {
     background-color: #0056b3;
     transform: scale(1.05);
 }
