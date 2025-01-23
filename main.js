@@ -24,6 +24,7 @@ if (window.location.href.startsWith("file")) {
     );
 }
 
+// Replace placeholder header, side panel, and footer with real HTML
 fetch("templates/header.html")
     .then(res => res.text())
     .then(text => {
@@ -35,4 +36,10 @@ fetch("templates/side-panel.html")
     .then(res => res.text())
     .then(text => {
         document.getElementById("side-panel-placeholder").outerHTML = text;
+    });
+
+fetch("templates/footer.html")
+    .then(res => res.text())
+    .then(text => {
+        document.getElementById("footer-placeholder").outerHTML = text;
     });
