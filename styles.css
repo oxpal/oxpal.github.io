@@ -341,7 +341,11 @@ footer {
 
 .archive {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the column width as needed */
+    /*
+        This tells the browser to figure out the right size for the images so that they are ideally at least 500px, but to have them evenly fill out a row.
+        If the device has a narrow screen (e.g. a phone), then the images are allowed to be smaller than 500px so that they don't scroll off the side of the screen.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(min(500px, 80vw), 1fr));
     grid-gap: 10px; /* Adjust the gap between photos */
 }
 
@@ -351,6 +355,39 @@ footer {
     border-radius: 5px; /* Add border radius for rounded corners */
 }
 
+#archive-popup {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+
+    padding: 0px;
+    border: 0px;
+
+    background: rgba(0, 0, 0, 0.8)
+}
+
+#archive-popup-center {
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: auto;
+}
+
+#archive-popup-image{
+    width: 100%;
+}
+
+#archive-popup-alt {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    background: black;
+    padding: 20px;
+}
 
 /* Media query for mobile devices */
 

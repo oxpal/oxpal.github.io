@@ -30,45 +30,93 @@
         <a href="https://oa4p.substack.com/" class="mobile-banner">Join Our Substack</a>
         <main>
             <div id="side-panel-placeholder"></div>
-            <div class="archive">
-                <img src="assets/gallery/DSCF5413.jpg" alt="">
-                <img src="assets/gallery/DSCF2920_scrubbed.png" alt="">
-                <img src="assets/gallery/IMG_6309_scrubbed.png" alt="">
-                <img src="assets/gallery/DSCF3180_scrubbed.png" alt="">
-                <img src="assets/gallery/IMG_6578_scrubbed.png" alt="">
-                <img src="assets/gallery/IMG_6379_scrubbed.png" alt="">
-                <img src="assets/gallery/DSCF5430_anonymized.jpg" alt="">
-                <img src="assets/gallery/IMG_9133_scrubbed.png" alt="">
-                <img src="assets/gallery/IMG_6317_scrubbed.png" alt="">
-                <img src="assets/gallery/P5088779.jpg" alt="">
-                <img src="assets/gallery/DSCF2421_scrubbed.png" alt="">
-                <img src="assets/gallery/IMG_9092_scrubbed.png" alt="">
-                <img src="assets/gallery/DSCF2442_scrubbed.png" alt="">
-                <img src="assets/gallery/IMG_6520_scrubbed.png" alt="">
-                <img src="assets/gallery/DSC08506.jpg" alt="">
-                <img src="assets/gallery/DSCF4595.jpg" alt="">
-                <img src="assets/gallery/P5068517.jpg" alt="">
-                <img src="assets/gallery/IMG_6574_scrubbed.png" alt="">
-                <img src="assets/gallery/P5068461.jpg" alt="">
-                <img src="assets/gallery/DSCF2609_scrubbed.png" alt="">
-                <img src="assets/gallery/DSCF2555_scrubbed.png" alt="">
-                <img src="assets/gallery/P5088779 (1).jpg" alt="">
-                <img src="assets/gallery/IMG_6470_scrubbed.png" alt="">
-                <img src="assets/gallery/DSCF5443.jpg" alt="">
-                <img src="assets/gallery/IMG_6323_scrubbed.png" alt="">
-                <img src="assets/gallery/DSCF5424.jpg" alt="">
-                <img src="assets/gallery/P5068424.jpg" alt="">
-                <img src="assets/gallery/P5068381.jpg" alt="">
-                <img src="assets/gallery/DSCF3223_scrubbed.png" alt="">
-                <img src="assets/gallery/DSCF3276_scrubbed.png" alt="">
-                <img src="assets/gallery/DSCF5421.jpg" alt="">
-                <img src="assets/gallery/DSCF5409.jpg" alt="">
+            <div class="archive" id="archive-grid">
+                <!-- Will be filled in dynamically -->
+            </div>
+
+            <div id="archive-popup" style="display: none">
+                <div id="archive-popup-flex">
+                    <div id="archive-popup-center">
+                        <img src="" id="archive-popup-image">
+                        <p id="archive-popup-alt"></p>
+                    </div>
+                </div>
             </div>
         </main>
         <div id="footer-placeholder"></div>
     </div>
 
     <script src="main.js"></script>
+
+    <script>
+        // TODO: alt text for more images
+        const IMAGES = [
+            { src: "assets/gallery/DSCF5413.jpg", alt: "A banner reading 'liberated zone', with the text coloured in as the Palestinian flag. The banner is strapped to a wall along with another Palestinian flag. In the background tents can be seen." },
+            { src: "assets/gallery/DSCF2920_scrubbed.png", alt: "" },
+            { src: "assets/gallery/IMG_6309_scrubbed.png", alt: "A placard with a list of demands: 1. Disclose all finances. 2. Divest from Israeli genocide, apartheid and occupation. 3. Overhaul university investment policy. 4. Boycott Israeli genocide, apartheid and occupation. 5. Stop banking with Barclays. 6. Support Palestinian-led rebuilding of education in Gaza." },
+            { src: "assets/gallery/DSCF3180_scrubbed.png", alt: "A speaker speaks into a microphone while crossing her fingers. She is standing in front of the encampment, with the Oxford Action For Palestine logo on fabric on the closest tent. " }, // TODO: who is this?
+            { src: "assets/gallery/IMG_6578_scrubbed.png", alt: "" },
+            { src: "assets/gallery/IMG_6379_scrubbed.png", alt: "" },
+            { src: "assets/gallery/DSCF5430_anonymized.jpg", alt: "" },
+            { src: "assets/gallery/IMG_9133_scrubbed.png", alt: "" },
+            { src: "assets/gallery/IMG_6317_scrubbed.png", alt: "" },
+            { src: "assets/gallery/P5088779.jpg", alt: "" },
+            { src: "assets/gallery/DSCF2421_scrubbed.png", alt: "" },
+            { src: "assets/gallery/IMG_9092_scrubbed.png", alt: "" },
+            { src: "assets/gallery/DSCF2442_scrubbed.png", alt: "" },
+            { src: "assets/gallery/IMG_6520_scrubbed.png", alt: "" },
+            { src: "assets/gallery/DSC08506.jpg", alt: "" },
+            { src: "assets/gallery/DSCF4595.jpg", alt: "" },
+            { src: "assets/gallery/P5068517.jpg", alt: "" },
+            { src: "assets/gallery/IMG_6574_scrubbed.png", alt: "" },
+            { src: "assets/gallery/P5068461.jpg", alt: "" },
+            { src: "assets/gallery/DSCF2609_scrubbed.png", alt: "" },
+            { src: "assets/gallery/DSCF2555_scrubbed.png", alt: "" },
+            { src: "assets/gallery/P5088779 (1).jpg", alt: "" },
+            { src: "assets/gallery/IMG_6470_scrubbed.png", alt: "" },
+            { src: "assets/gallery/DSCF5443.jpg", alt: "" },
+            { src: "assets/gallery/IMG_6323_scrubbed.png", alt: "" },
+            { src: "assets/gallery/DSCF5424.jpg", alt: "" },
+            { src: "assets/gallery/P5068424.jpg", alt: "" },
+            { src: "assets/gallery/P5068381.jpg", alt: "" },
+            { src: "assets/gallery/DSCF3223_scrubbed.png", alt: "" },
+            { src: "assets/gallery/DSCF3276_scrubbed.png", alt: "" },
+            { src: "assets/gallery/DSCF5421.jpg", alt: "" },
+            { src: "assets/gallery/DSCF5409.jpg", alt: "" },
+        ];
+
+        const archive = document.getElementById("archive-grid");
+        const popup = document.getElementById("archive-popup");
+        const popup_image = document.getElementById("archive-popup-image");
+        const popup_alt = document.getElementById("archive-popup-alt");
+
+        // Whether the popup is currently open
+        let popup_open = false;
+
+        // When the popup is clicked, hide it
+        popup.onclick = () => {
+            popup_open = false;
+            popup.style.setProperty("display", "none");
+        };
+
+        IMAGES.forEach(image => {
+            const element = document.createElement("img");
+            element.setAttribute("src", image.src);
+            element.setAttribute("alt", image.alt);
+            element.setAttribute("loading", "lazy"); // This makes the images at the top of the page load first instead of having all the images half-loaded at once
+
+            element.onclick = () => {
+                console.log("GG");
+                popup_open = true;
+                popup.style.setProperty("display", "block");
+                popup_image.setAttribute("src", image.src);
+                popup_image.setAttribute("alt", image.alt);
+                popup_alt.innerHTML = image.alt;
+            };
+
+            archive.appendChild(element);
+        });
+    </script>
 </body>
 
 </html>
