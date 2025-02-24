@@ -22,7 +22,7 @@ body {
     height: 120px; /* The real header has an 80px logo and 20px padding on either side */
 }
 
-header {
+.main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,9 +33,19 @@ header {
 }
 
 
-header .logo img {
+.main-header .logo img {
     height: 80px;
 }
+
+.unmaintained-warning {
+    background-color: #a52323;
+    min-height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+    color: white;
+}
+
 
 nav ul {
     display: flex;
