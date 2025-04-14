@@ -1,5 +1,5 @@
 function setup_header() {
-    // JavaScript to toggle the dropdown menu
+    // Javascript to toggle the dropdown menu
     document.querySelector('.dropbtn').addEventListener('click', function (event) {
         event.stopPropagation();  // Prevent event from bubbling up to window
         const dropdown = document.querySelector('.dropdown-content');
